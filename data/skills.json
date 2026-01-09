@@ -1,0 +1,7 @@
+{
+  "python": ["pandas", "numpy", "sklearn"],
+  "sql": ["joins", "window functions", "subqueries"],
+  "machine learning": ["regression", "classification", "evaluation metrics"],
+  "power bi": ["dax", "dashboard"],
+  "excel": ["vlookup", "pivot table"]
+}
