@@ -1,154 +1,162 @@
-🚀 Top-Tier Resume Screening System
+🏆 Top-Tier Resume Screening System
 
-AI-Powered • Explainable • Recruiter-Friendly
+An AI-powered resume screening system built with Python, NLP, and Streamlit that automatically ranks resumes against a job description using semantic similarity, skill extraction, resume quality analysis, and interactive dashboards.
 
-An AI-based resume screening system that ranks candidates against a job description using semantic similarity, skill intelligence, and resume quality analysis, visualized through an interactive dashboard.
+This project is designed to simulate a real-world recruiter/ATS workflow and goes beyond basic keyword matching.
 
-🔗 Quick Navigation
+🚀 Features
+🔍 Resume Analysis
 
-    Why this project?
+PDF & DOCX resume parsing
 
-    Key Features
+Bias word removal (gendered / filler terms)
 
-    How it Works
+Resume section detection (Skills, Experience, Projects, Education)
 
-    Dashboard Highlights
+🧠 Intelligent Matching
 
-    Tech Stack
+TF-IDF semantic similarity between resume sections and job description
 
-    Run Locally
+Skill extraction from resumes & job descriptions
 
-    Future Improvements
+Skill gap analysis
 
+Skill freshness detection (recent usage)
 
-❓ Why this project?
+📊 Scoring & Ranking
 
-Traditional ATS systems:
+Final weighted resume score
 
-❌ Rely on keyword matching
+Resume quality score (structure, clarity, length, metrics)
 
-❌ Miss qualified candidates
+Buzzword detection (flags low-signal resumes)
 
-❌ Offer no explanation
+📈 Interactive Dashboard
 
+Candidate ranking table
 
-This system focuses on:
+Score distribution charts
 
-✅ Semantic relevance
+Resume quality visualization
 
-✅ Explainable scoring
+Skill-gap heatmap
 
-✅ Skill gaps & freshness
+Expandable candidate insights
 
-✅ Fairer screening
+Score-based filtering (slider)
 
+🧩 Project Architecture
+top_tier_resume_screening/
+│
+├── app.py                     # Streamlit dashboard
+├── requirements.txt           # Dependencies
+├── data/
+│   ├── skills.json            # Skill taxonomy
+│   └── job_description.txt
+│
+├── parser/
+│   └── resume_parser.py       # PDF/DOCX text extraction
+│
+├── logic/
+│   ├── skill_extractor.py     # Skill extraction
+│   ├── semantic_match.py      # TF-IDF semantic matching
+│   ├── scoring.py             # Resume scoring logic
+│   ├── resume_quality.py      # Resume quality scoring
+│   ├── gap_analysis.py        # Skill gap detection
+│   ├── freshness.py           # Skill recency analysis
+│   ├── sections.py            # Resume section parsing
+│   └── bias_utils.py          # Bias & buzzword detection
+│
+└── .gitignore
 
-✨ Key Features
+⚙️ Tech Stack
 
-📄 Resume parsing (PDF & DOCX)
+Python 3.10+
 
-🧹 Bias & buzzword removal
+Streamlit – UI & dashboard
 
-🧩 Skill extraction & gap analysis
+scikit-learn – TF-IDF vectorization
 
-🧠 TF-IDF semantic matching
+NLTK / Regex – NLP processing
 
-⏳ Skill freshness scoring
+Plotly – Interactive charts
 
-📊 Resume quality score
+PyPDF2 / python-docx – Resume parsing
 
-📈 Interactive Streamlit dashboard
-
-🎯 Candidate ranking & filtering
-
-
-🧠 How it Works
-
-    Resume + Job Description
-             ↓
-    Text Extraction & Cleaning
-             ↓
-    Skill & Section Analysis
-             ↓
-    TF-IDF Semantic Matching
-             ↓
-    Weighted Scoring Engine
-             ↓
-    Interactive Recruiter Dashboard
-
-
-📊 Dashboard Highlights
-
-<details> <summary>🔍 What recruiters can do</summary>
-
-View ranked candidates
-
-Filter by score range
-
-Identify missing skills
-
-Detect buzzword-heavy resumes
-
-Compare resume quality visually
-
-</details> <details> <summary>📈 Visualizations included</summary>
-
-Score distribution bar charts
-
-Candidate comparison tables
-
-Resume quality indicators
-
-</details>
-
-🛠️ Tech Stack
-
-Category	Tools
-Language	Python
-NLP	TF-IDF, Cosine Similarity
-Framework	Streamlit
-Visualization	Plotly
-Parsing	PyPDF2, python-docx
-ML Utils	scikit-learn
-
-
-▶️ Run Locally
+▶️ How to Run Locally
+1️⃣ Clone the Repository
 git clone https://github.com/Yaminic02/top_tier_resume_screening.git
 cd top_tier_resume_screening
+
+2️⃣ Install Dependencies
 pip install -r requirements.txt
+
+3️⃣ Run the Application
 streamlit run app.py
 
+📌 Example Workflow
 
+Paste a Job Description
 
-🚀 Future Improvements
+Upload multiple resumes (PDF / DOCX)
 
-<details> <summary>Click to expand</summary>
-Transformer embeddings (BERT / SBERT)
+Click Screen Resumes
 
-Resume anonymization to reduce bias
+View:
 
-Auto resume feedback generation
+Ranked candidates
 
-CSV / Excel export
+Skill gaps
 
-Cloud deployment
+Resume quality
 
-</details>
+TF-IDF similarity
 
+Filter candidates using score slider
 
-🎯 Learning Outcomes
+📊 Scoring Logic (High Level)
+Component	Weight
+Skill Match	High
+TF-IDF Similarity	Medium
+Skill Freshness	Medium
+Resume Quality	Medium
+Buzzword Penalty	Low
 
-Applied NLP to a real recruitment problem
-Built an explainable AI scoring system
-Designed an end-to-end ML application
-Gained hands-on experience with Streamlit dashboards
+This ensures fair, explainable, and balanced scoring.
 
+🎯 Why This Project Is Unique
 
+✅ Not just keyword matching
+✅ Recruiter-focused explanations
+✅ Bias-aware resume processing
+✅ Visual skill-gap analysis
+✅ End-to-end ATS-style pipeline
 
+This is a portfolio-grade project suitable for:
+
+Data Analyst roles
+
+ML / AI Internships
+
+Applied NLP positions
+
+🔮 Future Enhancements
+
+Sentence-transformer embeddings (BERT)
+
+Resume feedback generation
+
+Export results to CSV
+
+Candidate shortlisting recommendations
+
+Resume anonymization
 
 👤 Author
 
 Yamini Chauhan
-🔗 GitHub: https://github.com/Yaminic02
+GitHub: @Yaminic02
 
-⭐ If you like this project, give it a star!
+⭐ If you like this project
+
+Give it a ⭐ on GitHub — it helps a lot!
